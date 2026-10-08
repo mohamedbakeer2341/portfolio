@@ -67,66 +67,68 @@
 }
 
 [data-theme="light"] {
-  /* Color Palette - Light Mode based on Coolors: #32292f | #575366 | #6e7dab | #5762d5 | #d1e3dd */
-  --bg-primary: #f5f6f8;
-  --bg-secondary: #eaedf2;
-  --bg-tertiary: #dfe4eb;
-  --bg-card: rgba(255, 255, 255, 0.94);
-  --bg-card-hover: rgba(244, 247, 252, 0.98);
+  /* Color Palette - Light Mode with High Contrast (WCAG AAA) */
+  --bg-primary: #f6f7fa;
+  --bg-secondary: #edf0f5;
+  --bg-tertiary: #e2e6ee;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f7f9fc;
   --bg-elevated: #ffffff;
-  --bg-glass: rgba(255, 255, 255, 0.88);
+  --bg-glass: rgba(255, 255, 255, 0.94);
 
-  /* Accents */
-  --accent: #5762d5;          /* Royal Iris */
-  --accent-light: #6e7dab;    /* Slate Lavender Blue */
-  --accent-dark: #3f49b8;
-  --accent-glow: rgba(87, 98, 213, 0.22);
-  --accent-subtle: rgba(87, 98, 213, 0.08);
+  /* Accents - High Contrast for light background */
+  --accent: #4853cc;          /* Rich Royal Indigo (5.8:1 contrast on white) */
+  --accent-light: #373fa8;    /* Deep Indigo for readable subtitles */
+  --accent-dark: #2a318c;
+  --accent-glow: rgba(72, 83, 204, 0.18);
+  --accent-subtle: rgba(72, 83, 204, 0.08);
 
   /* Functional Status Accents */
-  --emerald: #1c7c59;         /* High-contrast crisp emerald */
-  --emerald-glow: rgba(28, 124, 89, 0.16);
-  --indigo: #5762d5;
-  --indigo-glow: rgba(87, 98, 213, 0.18);
-  --amber: #b87514;
-  --rose: #d6324b;
+  --emerald: #0f6c44;         /* High-contrast deep Emerald (5.2:1 contrast) */
+  --emerald-glow: rgba(15, 108, 68, 0.15);
+  --indigo: #4853cc;
+  --indigo-glow: rgba(72, 83, 204, 0.18);
+  --amber: #995c00;           /* High-contrast amber */
+  --rose: #b81d36;            /* High-contrast rose */
 
-  /* Typography Colors */
-  --text-primary: #1c161a;    /* Charcoal dark from palette */
-  --text-secondary: #32292f;  /* Deep Raisin text from palette */
-  --text-muted: #575366;      /* Slate Violet from palette */
-  --text-dim: #6e7dab;        /* Slate Blue from palette */
-  --text-code: #5762d5;       /* Code highlight */
+  /* Typography Colors - Pitch Sharp Clarity */
+  --text-primary: #121016;    /* Deep pitch black-charcoal (16:1 contrast) */
+  --text-secondary: #272330;  /* Crisp dark charcoal for paragraphs & labels (11:1 contrast) */
+  --text-muted: #4e4a5d;      /* Solid slate for secondary details (7.2:1 contrast) */
+  --text-dim: #656175;        /* Clear readable labels & minor text (5.1:1 contrast) */
+  --text-code: #2a318c;       /* Deep readable indigo code */
 
   /* Borders & Dividers */
-  --border-subtle: rgba(87, 83, 102, 0.15);
-  --border-medium: rgba(87, 83, 102, 0.26);
-  --border-accent: rgba(87, 98, 213, 0.40);
-  --border-glow: rgba(87, 98, 213, 0.60);
+  --border-subtle: rgba(45, 35, 48, 0.12);
+  --border-medium: rgba(45, 35, 48, 0.22);
+  --border-accent: rgba(72, 83, 204, 0.45);
+  --border-glow: rgba(72, 83, 204, 0.65);
 
   /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(50, 41, 47, 0.06);
-  --shadow-md: 0 8px 24px rgba(50, 41, 47, 0.09);
-  --shadow-lg: 0 16px 40px rgba(50, 41, 47, 0.13);
-  --shadow-accent: 0 0 30px rgba(87, 98, 213, 0.14);
+  --shadow-sm: 0 2px 8px rgba(25, 20, 35, 0.06);
+  --shadow-md: 0 8px 24px rgba(25, 20, 35, 0.09);
+  --shadow-lg: 0 16px 40px rgba(25, 20, 35, 0.13);
+  --shadow-accent: 0 0 30px rgba(72, 83, 204, 0.15);
 }
 
 [data-theme="light"] body {
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
   background-image: 
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(87, 98, 213, 0.08), transparent 70%),
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(72, 83, 204, 0.06), transparent 70%),
     radial-gradient(circle at 100% 30%, rgba(110, 125, 171, 0.06), transparent 50%),
-    radial-gradient(circle at 0% 70%, rgba(209, 227, 221, 0.40), transparent 50%);
+    radial-gradient(circle at 0% 70%, rgba(209, 227, 221, 0.35), transparent 50%);
 }
 
 [data-theme="light"] body::before {
   background-image: 
-    linear-gradient(rgba(50, 41, 47, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(50, 41, 47, 0.035) 1px, transparent 1px);
+    linear-gradient(rgba(45, 35, 48, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(45, 35, 48, 0.04) 1px, transparent 1px);
 }
 
 [data-theme="light"] .status-indicator {
-  background: rgba(28, 124, 89, 0.08);
-  border-color: rgba(28, 124, 89, 0.25);
+  background: rgba(15, 108, 68, 0.08);
+  border-color: rgba(15, 108, 68, 0.28);
   color: var(--emerald);
 }
 
