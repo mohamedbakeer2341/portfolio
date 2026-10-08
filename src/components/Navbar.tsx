@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Terminal, Menu, X, ArrowUpRight } from 'lucide-react';
+import { Terminal, Menu, X, ArrowUpRight, Sun, Moon } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 interface NavbarProps {
   onContactClick: () => void;
+  theme: 'dark' | 'light';
+  onToggleTheme: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
+export const Navbar: React.FC<NavbarProps> = ({ onContactClick, theme, onToggleTheme }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
@@ -85,6 +87,20 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
           </ul>
 
           <div className="nav-actions">
+            <button
+              className="theme-toggle-btn"
+              onClick={onToggleTheme}
+              aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+              title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+              id="theme-toggle-btn"
+            >
+              {theme === 'dark' ? (
+                <Sun size={18} className="theme-toggle-icon sun-icon" />
+              ) : (
+                <Moon size={18} className="theme-toggle-icon moon-icon" />
+              )}
+            </button>
+
             <div className="status-indicator" title="Open to full-time engineering opportunities">
               <span className="status-dot"></span>
               <span>Available for Roles</span>
@@ -125,6 +141,22 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
             {item.label}
           </a>
         ))}
+
+        <div className="mobile-theme-row">
+          <span>Theme ({theme === 'dark' ? 'Dark' : 'Light'})</span>
+          <button
+            className="theme-toggle-btn"
+            onClick={onToggleTheme}
+            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+          >
+            {theme === 'dark' ? (
+              <Sun size={18} className="theme-toggle-icon sun-icon" />
+            ) : (
+              <Moon size={18} className="theme-toggle-icon moon-icon" />
+            )}
+          </button>
+        </div>
+
         <button
           className="btn btn-primary"
           style={{ marginTop: '16px' }}
