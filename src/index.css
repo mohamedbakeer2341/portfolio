@@ -4,48 +4,48 @@
    ========================================================================== */
 
 :root {
-  /* Color Palette - Deep Dark Engineering Aesthetic */
-  --bg-primary: #07090e;
-  --bg-secondary: #0c101a;
-  --bg-tertiary: #111726;
-  --bg-card: rgba(13, 19, 32, 0.78);
-  --bg-card-hover: rgba(18, 27, 45, 0.92);
-  --bg-elevated: #162033;
-  --bg-glass: rgba(10, 14, 23, 0.85);
+  /* Color Palette - Coolors: #32292f | #575366 | #6e7dab | #5762d5 | #d1e3dd */
+  --bg-primary: #1c161a;
+  --bg-secondary: #272025;
+  --bg-tertiary: #32292f;
+  --bg-card: rgba(50, 41, 47, 0.78);
+  --bg-card-hover: rgba(87, 83, 102, 0.40);
+  --bg-elevated: #3d343a;
+  --bg-glass: rgba(32, 25, 30, 0.88);
 
   /* Accents */
-  --accent: #38bdf8;          /* Electric Sky Cyan */
-  --accent-light: #7dd3fc;
-  --accent-dark: #0284c7;
-  --accent-glow: rgba(56, 189, 248, 0.22);
-  --accent-subtle: rgba(56, 189, 248, 0.08);
+  --accent: #5762d5;          /* Royal Iris / Indigo */
+  --accent-light: #6e7dab;    /* Slate Lavender Blue */
+  --accent-dark: #434cb5;
+  --accent-glow: rgba(87, 98, 213, 0.30);
+  --accent-subtle: rgba(87, 98, 213, 0.12);
 
   /* Functional Status Accents */
-  --emerald: #10b981;
-  --emerald-glow: rgba(16, 185, 129, 0.2);
-  --indigo: #6366f1;
-  --indigo-glow: rgba(99, 102, 241, 0.2);
-  --amber: #f59e0b;
-  --rose: #f43f5e;
+  --emerald: #d1e3dd;         /* Ice Mint / Soft Pastel Teal */
+  --emerald-glow: rgba(209, 227, 221, 0.25);
+  --indigo: #5762d5;
+  --indigo-glow: rgba(87, 98, 213, 0.25);
+  --amber: #e8b974;
+  --rose: #e66a7b;
 
   /* Typography Colors */
-  --text-primary: #f8fafc;
-  --text-secondary: #cbd5e1;
-  --text-muted: #64748b;
-  --text-dim: #475569;
-  --text-code: #38bdf8;
+  --text-primary: #f5f7f6;
+  --text-secondary: #d1e3dd;
+  --text-muted: #aab2cd;
+  --text-dim: #7f7a8f;
+  --text-code: #d1e3dd;
 
   /* Borders & Dividers */
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-medium: rgba(255, 255, 255, 0.14);
-  --border-accent: rgba(56, 189, 248, 0.35);
-  --border-glow: rgba(56, 189, 248, 0.6);
+  --border-subtle: rgba(110, 125, 171, 0.18);
+  --border-medium: rgba(110, 125, 171, 0.32);
+  --border-accent: rgba(87, 98, 213, 0.45);
+  --border-glow: rgba(87, 98, 213, 0.75);
 
   /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.55);
-  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.7);
-  --shadow-accent: 0 0 30px rgba(56, 189, 248, 0.15);
+  --shadow-sm: 0 2px 8px rgba(25, 20, 24, 0.5);
+  --shadow-md: 0 8px 24px rgba(25, 20, 24, 0.7);
+  --shadow-lg: 0 16px 40px rgba(20, 16, 19, 0.85);
+  --shadow-accent: 0 0 30px rgba(87, 98, 213, 0.25);
 
   /* Typography */
   --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -89,9 +89,9 @@ body {
   overflow-x: hidden;
   position: relative;
   background-image: 
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(56, 189, 248, 0.08), transparent 70%),
-    radial-gradient(circle at 100% 30%, rgba(99, 102, 241, 0.04), transparent 50%),
-    radial-gradient(circle at 0% 70%, rgba(16, 185, 129, 0.03), transparent 50%);
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(87, 98, 213, 0.15), transparent 70%),
+    radial-gradient(circle at 100% 30%, rgba(110, 125, 171, 0.08), transparent 50%),
+    radial-gradient(circle at 0% 70%, rgba(209, 227, 221, 0.05), transparent 50%);
   background-attachment: fixed;
 }
 
